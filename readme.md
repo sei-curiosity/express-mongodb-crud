@@ -7,9 +7,9 @@
 
 ### Routes
 
-* INDEX   : GET    - /students     - show all students names 
-* SHOW    : GET    - /students/:id - show a single student 
-* CREATE  : POST   - /students     - Create a new Student 
-* UPDATE  : PATCH  - /students     - Update a single student 
-* DESTROY : Delete - /students     - Destroy a single student 
+* INDEX   : GET    - /students       - show all students names 
+* CREATE  : POST   - /students       - Create a new Student
+* SHOW    : GET    - /students/:id   - show a single student  
+* UPDATE  : PATCH  - /students/:id   - Update a single student 
+* DESTROY : Delete - /students/:id   - Destroy a single student 
 
