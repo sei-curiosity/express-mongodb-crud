@@ -45,11 +45,14 @@ router.get('/students/:id', (req,res) => {
 router.patch('/students/:id',(req,res) => {
     const studentBody = req.body.student;
     const studentId = req.params.id;
-    Student.findById(studentId)
-    .then(student => {
-       return student.update(studentBody)
-    })
-    .then( () => res.sendStatus(204) )
+    // Student.findById(studentId)
+    // .then(student => {
+    //    return student.update(studentBody)
+    // })
+    // .then( () => res.sendStatus(204) )
+    // .catch(console.error)
+    Student.findByIdAndUpdate(studentId,studentBody)
+    .then((student) => res.status(204))
     .catch(console.error)
 })
 
@@ -58,12 +61,15 @@ router.patch('/students/:id',(req,res) => {
 // Delete - /students/:id
 router.delete('/students/:id',(request,response) => {
     const studentId = request.params.id
-    Student.findById(studentId)
-    .then(student => {
-        return student.remove()
-    })
-    .then(() => res.sendStatus(204) )
+    Student.findByIdAndDelete(studentId)
+    .then(() => response.sendStatus(204))
     .catch(console.error)
+    // Student.findById(studentId)
+    // .then(student => {
+    //     return student.remove()
+    // })
+    // .then(() => response.sendStatus(204) )
+    // .catch(console.error)
 })
 
 module.exports =  router;
