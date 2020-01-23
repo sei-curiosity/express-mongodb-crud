@@ -23,4 +23,13 @@ const StudentSchema = new mongoose.Schema({
         type: String
     }
 
-},{})
+},{
+    timestamps : true
+})
+
+//Model
+///                            nameOfModel , Schema
+const Student = mongoose.model('Student',StudentSchema)
+
+
+module.exports = Student;
