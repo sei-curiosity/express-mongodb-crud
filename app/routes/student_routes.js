@@ -17,6 +17,17 @@ router.get('/students',(req,res) => {
 
 // create
 // POST - /students
+router.post('/students',(req,res) => {
+    const newStudent = req.body.student;
+    Stduent.create(newStudent)
+    .then(student => {
+        res.status(201).json({student:student})
+    })
+    .catch(console.error)
+})
+
+
+
 
 
 module.exports =  router;
