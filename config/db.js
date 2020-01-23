@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const dbName = 'express-mongodb-crud'
+const dbName = 'crud-express-mongodb'
 mongoose.connect(`mongodb://localhost/${dbName}`)
 
 const db = mongoose.connection

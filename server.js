@@ -1,11 +1,12 @@
 // require express
 
+// require database configuration logic
 
 // require route files
 
 
-// require database configuration logic
-// `db` will be the actual Mongo URI as a string
+
+
 
 
 
